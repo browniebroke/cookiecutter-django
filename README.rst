@@ -1,6 +1,8 @@
 Cookiecutter Django
 ===================
 
+THIS IS A TEST
+
 .. image:: https://img.shields.io/github/workflow/status/cookiecutter/cookiecutter-django/CI/master
     :target: https://github.com/cookiecutter/cookiecutter-django/actions?query=workflow%3ACI
     :alt: Build Status
