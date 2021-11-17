@@ -3,6 +3,11 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2021.11.16
+
+### Changed
+- Dummy change to test workflow ([#24](https://github.com/browniebroke/cookiecutter-django/pull/24))
+
 ## [2021-11-15]
 ### Updated
 - Update django-allauth to 0.46.0 ([#3407](https://github.com/cookiecutter/cookiecutter-django/pull/3407))
