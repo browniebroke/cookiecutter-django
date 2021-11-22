@@ -3,7 +3,7 @@
   "version": "{{ cookiecutter.version }}",
   "dependencies": {},
   "devDependencies": {
-    "bootstrap": "^4.6.1",
+    "bootstrap": "^5.1.3",
     "gulp-concat": "^2.6.1",
     "@popperjs/core": "^2.8.6",
     "autoprefixer": "^10.4.0",
