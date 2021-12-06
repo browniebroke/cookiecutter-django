@@ -1539,6 +1539,13 @@ Listed in alphabetical order.
     <td></td>
   </tr>
   <tr>
+    <td>Timm Simpkins</td>
+    <td>
+      <a href="https://github.com/PoDuck">PoDuck</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
     <td>Tom Atkins</td>
     <td>
       <a href="https://github.com/knitatoms">knitatoms</a>
@@ -1661,6 +1668,13 @@ Listed in alphabetical order.
     <td>Yuchen Xie</td>
     <td>
       <a href="https://github.com/mapx">mapx</a>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Zach Borboa</td>
+    <td>
+      <a href="https://github.com/zachborboa">zachborboa</a>
     </td>
     <td></td>
   </tr>

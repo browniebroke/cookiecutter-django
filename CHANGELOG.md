@@ -3,6 +3,64 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2021.12.04
+
+### Changed
+- Removed mention of Foundation fork from readme ([#3445](https://github.com/cookiecutter/cookiecutter-django/pull/3445))
+### Updated
+- Update pytest-django to 4.5.1 ([#3443](https://github.com/cookiecutter/cookiecutter-django/pull/3443))
+
+## 2021.12.01
+
+### Updated
+- Update pre-commit to 2.16.0 ([#3442](https://github.com/cookiecutter/cookiecutter-django/pull/3442))
+
+## 2021.11.30
+
+### Updated
+- Update django-redis to 5.1.0 ([#3440](https://github.com/cookiecutter/cookiecutter-django/pull/3440))
+- Update django-stubs to 1.9.0 ([#3439](https://github.com/cookiecutter/cookiecutter-django/pull/3439))
+
+## 2021.11.29
+
+### Fixed
+- Fix pre-commit config ([#3435](https://github.com/cookiecutter/cookiecutter-django/pull/3435))
+### Updated
+- Update sphinx to 4.3.1 ([#3438](https://github.com/cookiecutter/cookiecutter-django/pull/3438))
+
+## 2021.11.27
+
+### Updated
+- Update coverage to 6.2 ([#3437](https://github.com/cookiecutter/cookiecutter-django/pull/3437))
+
+## 2021.11.26
+
+### Changed
+- Setup pre-commit for the template files ([#3433](https://github.com/cookiecutter/cookiecutter-django/pull/3433))
+
+## 2021.11.25
+
+### Changed
+- Add an assertion to fix mypy type error ([#3150](https://github.com/cookiecutter/cookiecutter-django/pull/3150))
+- Make `django` depend on `redis` in local Docker  ([#3265](https://github.com/cookiecutter/cookiecutter-django/pull/3265))
+
+## 2021.11.24
+
+### Changed
+- Cache Python dependencies on our CI ([#3434](https://github.com/cookiecutter/cookiecutter-django/pull/3434))
+- Small formatting fixes to Deploy to PythonAnywhere page ([#3432](https://github.com/cookiecutter/cookiecutter-django/pull/3432))
+### Updated
+- Upgrade to Django 3.2 ([#3425](https://github.com/cookiecutter/cookiecutter-django/pull/3425))
+
+## 2021.11.22
+
+### Changed
+- Removed unnecessary custom context processor exposing the DEBUG Template Context Variable ([#3042](https://github.com/cookiecutter/cookiecutter-django/pull/3042))
+- Clean up trailing whitespace ([#3430](https://github.com/cookiecutter/cookiecutter-django/pull/3430))
+### Updated
+- Update redis to 4.0.2 ([#3431](https://github.com/cookiecutter/cookiecutter-django/pull/3431))
+- Bump Postgres to 13.5 12.9 11.14 10.19; add 14.1 ([#3428](https://github.com/cookiecutter/cookiecutter-django/pull/3428))
+
 ## 2021.11.20
 
 ### Fixed
@@ -1043,7 +1101,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ### Removed
 - Remove the user list view (@browniebroke)
 
-### Fixed 
+### Fixed
 - Static storage default ACL (@browniebroke)
 
 ## [2019-05-17]
@@ -1079,7 +1137,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ## [2019-03-11]
 ### Changed
 - Sentry integration from Raven to Sentry-SDK (@gfabricio)
-- Made Redis config conditional on Celery locally (@demestav) 
+- Made Redis config conditional on Celery locally (@demestav)
 
 ## [2019-03-11]
 ### Added
@@ -1148,7 +1206,7 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 ### Changed
 - Test commands to use pytest (@jcass77)
 
-### Removed 
+### Removed
 - Some hacks leftovers from Bootstrap v4 beta in `project.js` (@hendrikschneider)
 
 ## [2018-07-12]
