@@ -11,6 +11,7 @@ const autoprefixer = require('autoprefixer')
 const browserSync = require('browser-sync').create()
 {% if cookiecutter.custom_bootstrap_compilation == 'y' %}
 const concat = require('gulp-concat')
+const tildeImporter = require('node-sass-tilde-importer');
 {% endif %}
 const cssnano = require ('cssnano')
 const imagemin = require('gulp-imagemin')
@@ -30,7 +31,6 @@ function pathsConfig(appName) {
 
   return {
     {%- if cookiecutter.custom_bootstrap_compilation == 'y' %}
-    bootstrapSass: `${vendorsRoot}/bootstrap/scss`,
     vendorsJs: [
       `${vendorsRoot}/@popperjs/core/dist/umd/popper.js`,
       `${vendorsRoot}/bootstrap/dist/js/bootstrap.js`,
@@ -65,6 +65,9 @@ function styles() {
 
   return src(`${paths.sass}/project.scss`)
     .pipe(sass({
+      {%- if cookiecutter.custom_bootstrap_compilation == 'y' %}
+      importer: tildeImporter,
+      {%- endif %}
       includePaths: [
         {%- if cookiecutter.custom_bootstrap_compilation == 'y' %}
         paths.bootstrapSass,

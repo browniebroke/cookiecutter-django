@@ -133,7 +133,14 @@ def update_package_json(remove_dev_deps=None, remove_keys=None, scripts=None):
 
 
 def remove_bootstrap_packages():
-    update_package_json(remove_dev_deps=["bootstrap", "gulp-concat", "@popperjs/core"])
+    update_package_json(
+        remove_dev_deps=[
+            "bootstrap",
+            "gulp-concat",
+            "@popperjs/core",
+            "node-sass-tilde-importer",
+        ]
+    )
 
 
 def handle_js_runner(choice):
