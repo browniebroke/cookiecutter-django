@@ -94,20 +94,89 @@ def remove_gulp_files():
         os.remove(file_name)
 
 
+def remove_webpack_files():
+    shutil.rmtree("webpack")
+    remove_vendors_js()
+
+
+def remove_vendors_js():
+    vendors_js_path = os.path.join(
+        "{{ cookiecutter.project_slug }}",
+        "static",
+        "js",
+        "vendors.js",
+    )
+    if os.path.exists(vendors_js_path):
+        os.remove(vendors_js_path)
+
+
 def remove_packagejson_file():
     file_names = ["package.json"]
     for file_name in file_names:
         os.remove(file_name)
 
 
-def remove_bootstrap_packages():
+def update_package_json(remove_dev_deps=None, remove_keys=None, scripts=None):
+    remove_dev_deps = remove_dev_deps or []
+    remove_keys = remove_keys or []
+    scripts = scripts or {}
     with open("package.json", mode="r") as fd:
         content = json.load(fd)
-    for package_name in ["bootstrap", "gulp-concat", "@popperjs/core"]:
+    for package_name in remove_dev_deps:
         content["devDependencies"].pop(package_name)
+    for key in remove_keys:
+        content.pop(key)
+    content["scripts"].update(scripts)
     with open("package.json", mode="w") as fd:
         json.dump(content, fd, ensure_ascii=False, indent=2)
         fd.write("\n")
+
+
+def remove_bootstrap_packages():
+    update_package_json(remove_dev_deps=["bootstrap", "gulp-concat", "@popperjs/core"])
+
+
+def handle_js_runner(choice):
+    if choice == "Gulp":
+        update_package_json(
+            remove_dev_deps=[
+                "@babel/core",
+                "@babel/preset-env",
+                "babel-loader",
+                "css-loader",
+                "mini-css-extract-plugin",
+                "postcss-loader",
+                "postcss-preset-env",
+                "sass-loader",
+                "webpack",
+                "webpack-bundle-tracker",
+                "webpack-cli",
+                "webpack-dev-server",
+                "webpack-merge",
+            ],
+            remove_keys=["babel"],
+        )
+        remove_webpack_files()
+    elif choice == "Webpack":
+        update_package_json(
+            remove_dev_deps=[
+                "browser-sync",
+                "cssnano",
+                "gulp",
+                "gulp-imagemin",
+                "gulp-plumber",
+                "gulp-postcss",
+                "gulp-rename",
+                "gulp-sass",
+                "gulp-uglify-es",
+                "node-sass-tilde-importer",
+            ],
+            scripts={
+                "dev": "webpack serve --config webpack/dev.config.js ",
+                "build": "webpack --config webpack/prod.config.js",
+            },
+        )
+        remove_gulp_files()
 
 
 def remove_celery_files():
@@ -394,8 +463,11 @@ def main():
         remove_packagejson_file()
         if "{{ cookiecutter.use_docker }}".lower() == "y":
             remove_node_dockerfile()
-    elif "{{ cookiecutter.custom_bootstrap_compilation }}" == "n":
-        remove_bootstrap_packages()
+    else:
+        handle_js_runner("{{ cookiecutter.js_task_runner}}".lower())
+        if "{{ cookiecutter.custom_bootstrap_compilation }}" == "n":
+            remove_bootstrap_packages()
+            remove_vendors_js()
 
     if "{{ cookiecutter.cloud_provider}}".lower() == "none":
         print(

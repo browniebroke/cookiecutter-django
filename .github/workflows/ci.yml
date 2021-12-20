@@ -78,6 +78,8 @@ jobs:
             args: "use_celery=y use_compressor=y"
           - name: With Gulp
             args: "js_task_runner=Gulp custom_bootstrap_compilation=y"
+          - name: With Webpack
+            args: "js_task_runner=Webpack custom_bootstrap_compilation=y"
 
     name: "${{ matrix.script.name }} Bare metal"
     runs-on: ubuntu-latest

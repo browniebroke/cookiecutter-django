@@ -26,7 +26,8 @@
   ],
   "js_task_runner": [
     "None",
-    "Gulp"
+    "Gulp",
+    "Webpack"
   ],
   "cloud_provider": [
     "AWS",
