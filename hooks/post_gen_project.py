@@ -464,11 +464,12 @@ def main():
 
     if "{{ cookiecutter.js_task_runner}}".lower() == "none":
         remove_gulp_files()
+        remove_webpack_files()
         remove_packagejson_file()
         if "{{ cookiecutter.use_docker }}".lower() == "y":
             remove_node_dockerfile()
     else:
-        handle_js_runner("{{ cookiecutter.js_task_runner}}".lower())
+        handle_js_runner("{{ cookiecutter.js_task_runner}}")
         if "{{ cookiecutter.custom_bootstrap_compilation }}" == "n":
             remove_bootstrap_packages()
             remove_vendors_js()
