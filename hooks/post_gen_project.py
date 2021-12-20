@@ -155,6 +155,10 @@ def handle_js_runner(choice):
                 "webpack-merge",
             ],
             remove_keys=["babel"],
+            scripts={
+                "dev": "gulp",
+                "build": "gulp generate-assets",
+            },
         )
         remove_webpack_files()
     elif choice == "Webpack":
