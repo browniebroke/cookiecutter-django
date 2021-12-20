@@ -180,7 +180,6 @@ def handle_js_runner(choice):
                 "gulp-rename",
                 "gulp-sass",
                 "gulp-uglify-es",
-                "node-sass-tilde-importer",
             ],
             scripts={
                 "dev": "webpack serve --config webpack/dev.config.js ",
