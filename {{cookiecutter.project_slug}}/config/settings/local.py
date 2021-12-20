@@ -69,7 +69,7 @@ if env("USE_DOCKER") == "yes":
 
     hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
     INTERNAL_IPS += [".".join(ip.split(".")[:-1] + ["1"]) for ip in ips]
-    {%- if cookiecutter.js_task_runner in ['Gulp', 'Webpack'] %}
+    {%- if cookiecutter.js_task_runner != 'None' %}
     try:
         _, _, ips = socket.gethostbyname_ex("node")
         INTERNAL_IPS.extend(ips)
