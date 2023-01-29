@@ -1,9 +1,14 @@
 """
 With these settings, tests run faster.
 """
+from typing import TYPE_CHECKING
 
 from .base import *  # noqa
 from .base import env
+
+if TYPE_CHECKING:
+    # Remove third party apps if doing type checking
+    INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
 
 # GENERAL
 # ------------------------------------------------------------------------------
