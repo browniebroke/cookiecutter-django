@@ -8,7 +8,9 @@ from .base import env
 
 if TYPE_CHECKING:
     # Remove third party apps if doing type checking
-    INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
+    INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS  # noqa
+    DATABASE_URL = "sqlite://:memory:"
+
 
 # GENERAL
 # ------------------------------------------------------------------------------
