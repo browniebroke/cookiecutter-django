@@ -24,9 +24,6 @@ pre-commit run --show-diff-on-failure -a
 # make sure all images build
 docker-compose -f local.yml build
 
-# run the project's type checks
-docker-compose -f local.yml run django mypy my_awesome_project
-
 # run the project's tests
 docker-compose -f local.yml run django pytest
 

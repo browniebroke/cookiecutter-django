@@ -26,11 +26,11 @@ Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
-### Type checks
+### Linting and type checks
 
-Running type checks with mypy:
+Linting and type checking are all run via pre-commit framework. To run them on all files, use:
 
-    $ mypy {{cookiecutter.project_slug}}
+    $ pre-commit run -a
 
 ### Test coverage
 
