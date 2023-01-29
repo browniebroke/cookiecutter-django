@@ -41,6 +41,8 @@ repos:
           {%- if cookiecutter.use_drf == "y" %}
           - djangorestframework-stubs
           {%- endif %}
+          # Needed for django-stubs to load settings
+          - django-environ
 
 # sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
 ci:
