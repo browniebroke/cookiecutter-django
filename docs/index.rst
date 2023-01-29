@@ -17,7 +17,6 @@ Contents
    developing-locally
    developing-locally-docker
    settings
-   linters
    testing
    document
    deployment-on-pythonanywhere
