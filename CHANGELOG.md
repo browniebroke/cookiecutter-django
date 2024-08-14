@@ -3,6 +3,75 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2024.08.13
+
+
+### Updated
+
+- Update tox to 4.18.0 ([#5299](https://github.com/cookiecutter/cookiecutter-django/pull/5299))
+
+- Update sentry-sdk to 2.13.0 ([#5298](https://github.com/cookiecutter/cookiecutter-django/pull/5298))
+
+- Update uvicorn to 0.30.6 ([#5295](https://github.com/cookiecutter/cookiecutter-django/pull/5295))
+
+## 2024.08.12
+
+
+### Updated
+
+- Update gunicorn to 23.0.0 ([#5294](https://github.com/cookiecutter/cookiecutter-django/pull/5294))
+
+## 2024.08.09
+
+
+### Updated
+
+- Update Ruff pre-commit hook to v0.5.7 ([#5293](https://github.com/cookiecutter/cookiecutter-django/pull/5293))
+
+## 2024.08.08
+
+
+### Updated
+
+- Update ruff to 0.5.7 ([#5291](https://github.com/cookiecutter/cookiecutter-django/pull/5291))
+
+- Bump python from 3.12.4 to 3.12.5 in docs Docker image ([#5287](https://github.com/cookiecutter/cookiecutter-django/pull/5287))
+
+- Bump python from 3.12.4 to 3.12.5 in local Docker image ([#5289](https://github.com/cookiecutter/cookiecutter-django/pull/5289))
+
+- Bump python from 3.12.4 to 3.12.5 in production Docker image ([#5290](https://github.com/cookiecutter/cookiecutter-django/pull/5290))
+
+## 2024.08.07
+
+
+### Updated
+
+- Update tox to 4.17.1 ([#5285](https://github.com/cookiecutter/cookiecutter-django/pull/5285))
+
+- Update django-anymail to 11.1 ([#5286](https://github.com/cookiecutter/cookiecutter-django/pull/5286))
+
+## 2024.08.06
+
+
+### Updated
+
+- Update django to 5.0.8 ([#5281](https://github.com/cookiecutter/cookiecutter-django/pull/5281))
+
+## 2024.08.05
+
+
+### Documentation
+
+- Simplify documentation for https in local development ([#5252](https://github.com/cookiecutter/cookiecutter-django/pull/5252))
+
+- Add Medium story in the Articles section ([#5275](https://github.com/cookiecutter/cookiecutter-django/pull/5275))
+
+### Updated
+
+- Update coverage to 7.6.1 ([#5276](https://github.com/cookiecutter/cookiecutter-django/pull/5276))
+
+- Auto-update pre-commit hooks ([#5277](https://github.com/cookiecutter/cookiecutter-django/pull/5277))
+
 ## 2024.08.04
 
 
