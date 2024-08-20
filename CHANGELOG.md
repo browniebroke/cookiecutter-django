@@ -3,6 +3,34 @@ All enhancements and patches to Cookiecutter Django will be documented in this f
 
 <!-- GENERATOR_PLACEHOLDER -->
 
+## 2024.08.19
+
+
+### Updated
+
+- Update factory-boy to 3.3.1 ([#5307](https://github.com/cookiecutter/cookiecutter-django/pull/5307))
+
+## 2024.08.17
+
+
+### Updated
+
+- Update ruff to 0.6.1 ([#5303](https://github.com/cookiecutter/cookiecutter-django/pull/5303))
+
+## 2024.08.16
+
+
+### Updated
+
+- Update django-allauth to 64.1.0 ([#5302](https://github.com/cookiecutter/cookiecutter-django/pull/5302))
+
+## 2024.08.15
+
+
+### Updated
+
+- Update ruff to 0.6.0 ([#5300](https://github.com/cookiecutter/cookiecutter-django/pull/5300))
+
 ## 2024.08.13
 
 
